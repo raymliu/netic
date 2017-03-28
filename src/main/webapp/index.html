@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--IE兼容模式-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--//响应式-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>这是一个BootStrap网页</title>
+    <!--//外部样式表-->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--网格样式-->
+    <style>
+        .row{
+            margin-bottom: 20px;
+        }
+        .row .row{
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        [class*="col-"]{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color:rgba(86,61,124,.15) ;
+            border: 1px solid rgba(86,61,124,.15);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>top</div>
+        <div>left</div>
+        <div>main</div>
+    </div>
+</body>
+<script src="jquery/jquery-2.1.1.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+
+<!--线上包-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</html>

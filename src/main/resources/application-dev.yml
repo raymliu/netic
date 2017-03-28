@@ -1,0 +1,19 @@
+server:
+  port: 8082
+  context-path: /rays
+
+info:
+  author: ray Ma
+  create Date : 2017/3/21
+
+girl:
+  name: 小明
+  age:  19
+  address: 北京
+
+
+
+
+
+
+
