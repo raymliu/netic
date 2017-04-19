@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
 import java.util.List;
 
 /**
@@ -15,17 +16,17 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserResource {
 
-    @Autowired
+    @Inject
     private UserService userService ;
 
     @RequestMapping(value="/save",method =RequestMethod.POST)
-    private User saveUser(User user){
+    private User saveUser(@RequestBody User user){
         User saveUser = userService.saveUser(user);
         return  saveUser ;
     }
 
     @RequestMapping(value ="/update",method = RequestMethod.PUT )
-    private User updateUser(User user){
+    private User updateUser(@RequestBody User user){
         User updateUSer = userService.UpdateUser(user);
         return updateUSer ;
     }
