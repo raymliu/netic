@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class Demo {
-    @Value("${info.author}")
+ /*   @Value("${info.author}")
     private String author;
 
     @Value("${info.create Date}")
@@ -33,6 +33,6 @@ public class Demo {
     public String testRest(@PathVariable("id") Integer id){
         return "get id ="+id;
     }
-
+*/
 
 }

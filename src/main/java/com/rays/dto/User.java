@@ -6,6 +6,7 @@ import org.joda.time.DateTime;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * Created by hand on 2017/3/23.
@@ -13,7 +14,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name ="net_user")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
