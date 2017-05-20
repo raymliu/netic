@@ -33,6 +33,7 @@ public class HttpAspect {
         StringBuffer requestURL = request.getRequestURL();
         String method = request.getMethod();
         String ip = request.getRemoteAddr();
+
         String reqClass = joinPoint.getSignature().getDeclaringTypeName(); //类名
         String reqMethod = joinPoint.getSignature().getName(); //请求方法
         Object[] args1 = joinPoint.getArgs();

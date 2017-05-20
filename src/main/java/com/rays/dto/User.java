@@ -1,5 +1,9 @@
 package com.rays.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.rays.filter.CustomDateTimeDeserializer;
+import com.rays.filter.CustomDateTimeSerializer;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
@@ -31,7 +35,9 @@ public class User implements Serializable {
 
     private DateTime birthday ;
 
-    //@Type(type ="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @Type(type ="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+    @JsonSerialize(using = CustomDateTimeSerializer.class)
+    @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     private DateTime createTime;
 
     private String address ;
