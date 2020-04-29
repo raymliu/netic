@@ -1,11 +1,9 @@
 package com.rays.dto;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.rays.filter.CustomDateTimeDeserializer;
-import com.rays.filter.CustomDateTimeSerializer;
-import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
+import com.baomidou.mybatisplus.annotations.TableName;
+
+import lombok.Data;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,7 +15,8 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table(name ="net_user")
+@TableName("net_user")
+@Data
 public class User implements Serializable {
 
     @Id
@@ -25,7 +24,6 @@ public class User implements Serializable {
     private Integer id ;
 
     @NotNull
-    //@Type(type = "varchar" )
     @Size(max = 30)
     private String name ;
 
@@ -33,84 +31,5 @@ public class User implements Serializable {
 
     private Boolean sex ;
 
-    private DateTime birthday ;
 
-    @Type(type ="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-    @JsonSerialize(using = CustomDateTimeSerializer.class)
-    @JsonDeserialize(using = CustomDateTimeDeserializer.class)
-    private DateTime createTime;
-
-    private String address ;
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public DateTime getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(DateTime birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public User() {
-    }
-
-    public DateTime getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(DateTime createTime) {
-        this.createTime = createTime;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Boolean getSex() {
-        return sex;
-    }
-
-    public void setSex(Boolean sex) {
-        this.sex = sex;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", sex=" + sex +
-                ", birthday=" + birthday +
-                ", createTime=" + createTime +
-                ", address='" + address + '\'' +
-                '}';
-    }
 }

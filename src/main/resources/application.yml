@@ -1,18 +1,22 @@
+server:
+  port: 7070
+  context-path: /rays
 spring:
   profiles:
     active: dev
-  datasource:
-    driver-class-name:  com.mysql.jdbc.Driver
-    url:  jdbc:mysql://127.0.0.1:3306/netic
-    username: root
-    password: root
   jpa:
+    #默认使用InnoDB引擎
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
-    show-sql: true
-#  eureka:
-#    instance:
-#      hostname: peer1
-#    client:
-#      serviceUrl:
+      show-sql: true
+
+
+
+
+  #  eureka:
+  #    instance:
+  #      hostname: peer1
+  #    client:
+  #      serviceUrl:
   #      defaultZone: http://peer2:8001/eureka/,http://peer3:8002/eureka/
