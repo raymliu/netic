@@ -10,4 +10,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+#  eureka:
+#    instance:
+#      hostname: peer1
+#    client:
+#      serviceUrl:
+  #      defaultZone: http://peer2:8001/eureka/,http://peer3:8002/eureka/
