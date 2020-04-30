@@ -8,10 +8,7 @@ spring:
     username: root
     password: root
   jpa:
-    #默认使用InnoDB引擎
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    hibernate:
-      ddl-auto: update
+
     show-sql: true
 
 

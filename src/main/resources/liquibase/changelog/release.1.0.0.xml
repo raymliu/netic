@@ -9,6 +9,26 @@
     <property name="now" value="sysdate" dbms="oracle"/>
 
     <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql"/>
+    
+    <changeSet id="20200529001" author="lei.ma">
+        <createTable tableName="net_user">
+            <column name="id" type="bigint" remarks="id" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="age" type="int"/>
+            <column name="sex" type="boolean"/>
+            <column name="phone" type="varchar(20)"/>
+            <column name="avatar" type="varchar(100)"/>
+            <column name="email" type="varchar(30)"/>
+            <column name="password" type="varchar(100)"/>
+            <column name="comment" type="varchar(200)"/>
+            <column name="create_by" type="varchar(30)"/>
+            <column name="create_time" type="timestamp"/>
+            <column name="modify_by" type="varchar(30)"/>
+            <column name="modify_time" type="timestamp"/>
+        </createTable>
+    </changeSet>
 
 
 </databaseChangeLog>

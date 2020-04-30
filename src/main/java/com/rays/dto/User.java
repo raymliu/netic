@@ -17,11 +17,10 @@ import java.io.Serializable;
 @Entity
 @TableName("net_user")
 @Data
-public class User implements Serializable {
+public class User extends BaseEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id ;
+    private Long id ;
 
     @NotNull
     @Size(max = 30)
@@ -30,6 +29,16 @@ public class User implements Serializable {
     private Integer age ;
 
     private Boolean sex ;
+
+    private String phone;
+
+    private String avatar;
+
+    private String email;
+
+    private String password;
+
+    private String comment;
 
 
 }

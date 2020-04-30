@@ -1,4 +1,4 @@
-package com.rays.properties;
+package com.rays.componment.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

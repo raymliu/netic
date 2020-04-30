@@ -1,4 +1,4 @@
-package com.rays.config;
+package com.rays.componment.config;
 
 import liquibase.exception.LiquibaseException;
 import liquibase.integration.spring.SpringLiquibase;
