@@ -1,6 +1,5 @@
 package com.rays.web;
 
-import net.sf.jsqlparser.statement.select.Top;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 /**
  * Created by Ray Ma on 2020/4/29.
@@ -26,7 +24,7 @@ public class KafkaController {
 
     static {
         Properties configs = initConfig();
-        consumer = new KafkaConsumer<String, String>(configs);
+        consumer = new KafkaConsumer<>(configs);
         consumer.subscribe(Arrays.asList(TOPIC));
     }
 
@@ -43,7 +41,7 @@ public class KafkaController {
 
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         while(true){
             ConsumerRecords<String,String> records =consumer.poll(5000);
